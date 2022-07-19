@@ -1,0 +1,33 @@
+{
+  "name": "smart-contract-basics",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "npm run build:live",
+    "build:live": "nodemon --exec ./node_modules/.bin/ts-node -- src/index.ts",
+    "test": "mocha -r ts-node/register ./tests/*.spec.ts",
+    "lint": "tslint --project ./tslint.json -t verbose"
+  },
+  "author": "onuraykac@gmail.com",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/chai": "^4.0.4",
+    "@types/mocha": "^2.2.43",
+    "@types/node": "^8.0.46",
+    "@types/sinon": "^2.3.6",
+    "@types/web3": "^1.2.2",
+    "chai": "^4.1.2",
+    "mocha": "^4.0.1",
+    "nodemon": "^1.12.1",
+    "sinon": "^4.0.1",
+    "ts-node": "^3.3.0",
+    "tslint": "^5.8.0",
+    "typescript": "^2.5.3"
+  },
+  "dependencies": {
+    "@truffle/hdwallet-provider": "^2.0.10",
+    "dotenv": "^16.0.1",
+    "web3": "^1.7.4"
+  }
+}
